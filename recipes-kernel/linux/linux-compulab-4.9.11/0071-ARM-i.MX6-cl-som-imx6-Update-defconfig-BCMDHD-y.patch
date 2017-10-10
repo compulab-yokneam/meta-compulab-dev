@@ -1,0 +1,29 @@
+From b0543cc55b280cd49308e8630a2f9fdd2f409260 Mon Sep 17 00:00:00 2001
+From: Valentin Raevsky <valentin@compulab.co.il>
+Date: Tue, 19 Sep 2017 12:28:31 +0300
+Subject: [PATCH 71/78] ARM: i.MX6: cl-som-imx6: Update defconfig BCMDHD=y
+
+Signed-off-by: Valentin Raevsky <valentin@compulab.co.il>
+---
+ arch/arm/configs/cl_som_imx6_defconfig | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/arch/arm/configs/cl_som_imx6_defconfig b/arch/arm/configs/cl_som_imx6_defconfig
+index 245e515..2ede74c 100644
+--- a/arch/arm/configs/cl_som_imx6_defconfig
++++ b/arch/arm/configs/cl_som_imx6_defconfig
+@@ -206,8 +206,10 @@ CONFIG_SMC911X=y
+ CONFIG_SMSC911X=y
+ # CONFIG_NET_VENDOR_STMICRO is not set
+ CONFIG_ATH_CARDS=y
+-CONFIG_BCMDHD=m
++CONFIG_BCMDHD=y
+ CONFIG_BCMDHD_SDIO=y
++CONFIG_BCMDHD_FW_PATH="/lib/firmware/bcm/ZP_BCM4339/fw_bcmdhd.bin"
++CONFIG_BCMDHD_NVRAM_PATH="/lib/firmware/bcm/ZP_BCM4339/bcmdhd.ZP.SDIO.cal"
+ CONFIG_MWIFIEX=m
+ CONFIG_MWIFIEX_SDIO=m
+ # CONFIG_INPUT_MOUSEDEV_PSAUX is not set
+-- 
+1.9.1
+

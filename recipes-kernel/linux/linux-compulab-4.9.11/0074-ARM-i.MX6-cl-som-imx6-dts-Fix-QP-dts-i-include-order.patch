@@ -1,0 +1,49 @@
+From 6069da13b25964e9f4c14cd348de08756441e5c2 Mon Sep 17 00:00:00 2001
+From: Valentin Raevsky <valentin@compulab.co.il>
+Date: Wed, 4 Oct 2017 09:27:25 +0300
+Subject: [PATCH 74/78] ARM: i.MX6: cl-som-imx6: dts: Fix QP dts(i) include
+ order
+
+Signed-off-by: Valentin Raevsky <valentin@compulab.co.il>
+---
+ arch/arm/boot/dts/imx6qp-cl-som-imx6.dts | 3 +--
+ arch/arm/boot/dts/imx6qp-sbc-imx6.dts    | 3 +--
+ 2 files changed, 2 insertions(+), 4 deletions(-)
+
+diff --git a/arch/arm/boot/dts/imx6qp-cl-som-imx6.dts b/arch/arm/boot/dts/imx6qp-cl-som-imx6.dts
+index 7e52bf6..4c7f40b 100644
+--- a/arch/arm/boot/dts/imx6qp-cl-som-imx6.dts
++++ b/arch/arm/boot/dts/imx6qp-cl-som-imx6.dts
+@@ -12,10 +12,9 @@
+  */
+ 
+ /dts-v1/;
+-#include "imx6q.dtsi"
++#include "imx6qp.dtsi"
+ #include "imx6q-cl-som-imx6.dtsi"
+ #include "imx6q-cm-fx6.dtsi"
+-#include "imx6qp.dtsi"
+ 
+ / {
+ 	model = "CompuLab CL-SOM-iMX6";
+diff --git a/arch/arm/boot/dts/imx6qp-sbc-imx6.dts b/arch/arm/boot/dts/imx6qp-sbc-imx6.dts
+index 1d7eb57..c1ebe20 100644
+--- a/arch/arm/boot/dts/imx6qp-sbc-imx6.dts
++++ b/arch/arm/boot/dts/imx6qp-sbc-imx6.dts
+@@ -12,12 +12,11 @@
+ */
+ 
+ /dts-v1/;
+-#include "imx6q.dtsi"
++#include "imx6qp.dtsi"
+ #include "imx6q-cl-som-imx6.dtsi"
+ #include "imx6q-cm-fx6.dtsi"
+ #include "imx6qdl-sb-fx6x.dtsi"
+ #include "imx6qdl-sb-fx6.dtsi"
+-#include "imx6qp.dtsi"
+ 
+ / {
+ 	model = "CompuLab CL-SOM-iMX6 on SB-FX6";
+-- 
+1.9.1
+
