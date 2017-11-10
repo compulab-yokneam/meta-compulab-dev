@@ -1,0 +1,55 @@
+From 2d3062ec18604312fdf56b01b845804f3809c7f2 Mon Sep 17 00:00:00 2001
+From: Valentin Raevsky <valentin@compulab.co.il>
+Date: Fri, 10 Nov 2017 21:09:34 +0200
+Subject: [PATCH] ARM: i.MX6: cl-som-imx6: Update defconfig TC358743=m
+
+Signed-off-by: Valentin Raevsky <valentin@compulab.co.il>
+---
+ arch/arm/configs/cl_som_imx6_defconfig | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/arch/arm/configs/cl_som_imx6_defconfig b/arch/arm/configs/cl_som_imx6_defconfig
+index 0fff47c..b58ac37 100644
+--- a/arch/arm/configs/cl_som_imx6_defconfig
++++ b/arch/arm/configs/cl_som_imx6_defconfig
+@@ -27,10 +27,10 @@ CONFIG_MODULE_SRCVERSION_ALL=y
+ CONFIG_ARCH_MXC=y
+ CONFIG_SOC_IMX53=y
+ CONFIG_SOC_IMX6Q=y
++CONFIG_MACH_CM_FX6=y
+ CONFIG_SOC_IMX6SL=y
+ CONFIG_SOC_IMX6SLL=y
+ CONFIG_SOC_VF610=y
+-CONFIG_MACH_CM_FX6=y
+ # CONFIG_SWP_EMULATE is not set
+ CONFIG_PCI=y
+ CONFIG_PCI_MSI=y
+@@ -237,6 +237,7 @@ CONFIG_FSL_OTP=y
+ CONFIG_HW_RANDOM=y
+ # CONFIG_I2C_COMPAT is not set
+ CONFIG_I2C_CHARDEV=y
++CONFIG_I2C_MUX=y
+ CONFIG_I2C_MUX_GPIO=y
+ CONFIG_I2C_MUX_PCA954x=y
+ # CONFIG_I2C_HELPER_AUTO is not set
+@@ -275,6 +276,8 @@ CONFIG_REGULATOR_PFUZE100=y
+ CONFIG_MEDIA_SUPPORT=y
+ CONFIG_MEDIA_CAMERA_SUPPORT=y
+ CONFIG_MEDIA_RADIO_SUPPORT=y
++CONFIG_MEDIA_CONTROLLER=y
++CONFIG_VIDEO_V4L2_SUBDEV_API=y
+ CONFIG_MEDIA_USB_SUPPORT=y
+ CONFIG_USB_VIDEO_CLASS=m
+ CONFIG_V4L_PLATFORM_DRIVERS=y
+@@ -289,6 +292,8 @@ CONFIG_VIDEO_MXC_IPU_OUTPUT=y
+ CONFIG_VIDEO_MXC_PXP_V4L2=y
+ CONFIG_SOC_CAMERA=y
+ CONFIG_RADIO_SI476X=y
++# CONFIG_MEDIA_SUBDRV_AUTOSELECT is not set
++CONFIG_VIDEO_TC358743=m
+ CONFIG_SOC_CAMERA_OV2640=y
+ CONFIG_DRM=y
+ CONFIG_DRM_VIVANTE=y
+-- 
+1.9.1
+
