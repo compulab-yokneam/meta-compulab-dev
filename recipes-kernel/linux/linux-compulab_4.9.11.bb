@@ -88,6 +88,7 @@ SRC_URI += "file://0001-platform-add-depends-property-handler.patch \
 	file://0076-ARM-i.MX6-dts-Add-extended-display-settings.patch \
 	file://0077-ARM-i.MX6-dts-Add-available-mode-string.patch \
 	file://0078-ARM-i.MX6-dts-Configure-the-parallel-interface-a-the.patch \
+	file://0079-ARM-i.MX6-cl-som-imx6-Update-defconfig-TC358743-m.patch \
 "
 
 SRC_URI_append_cm-fx6-evk += "file://cm-fx6-evk/defconfig"
